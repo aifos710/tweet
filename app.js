@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
 
 	boton.addEventListener("click", function(e){
 		e.preventDefault(); 
-		// var textarea = document.getElementById("status");
+
 		var status = textarea.value;
 		agregarMensaje(status);
 		document.getElementById("count").innerText = "140"
@@ -21,9 +21,10 @@ window.addEventListener("load", function(){
 
 	function agregarMensaje(status) {
 		var div = document.createElement("div");
-		div.innerText = status;
 		var posted = document.getElementById("posted");
 		posted.insertBefore(div, posted.childNodes[0]).classList.add("box");
+		var n =new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+		div.innerText = status + "  " + n;
 	}
 
 	var status = document.getElementById("status");
@@ -69,6 +70,8 @@ window.addEventListener("load", function(){
 	function resize(){
 		textarea.style.cssText = "height:auto; padding:0";
 	}
+
+	
 
 });
 
