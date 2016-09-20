@@ -22,7 +22,7 @@ body{
 
 #boton:disabled{
 	background-color: white;
-	border:1px solid black;
+	border:2px solid black;
 	color: black;
 }
 
@@ -34,12 +34,16 @@ textarea{
 #count{
 	height:20px ;
 	width:40px ;
-	border:1px solid black;
+	border:2px solid black;
 	margin: auto;
 	margin-top: 10px;
 
 }
 
-.box{
-	width: auto;
+.orange{
+	background-color:orange;
+}
+
+.red{
+	background-color: red;
 }

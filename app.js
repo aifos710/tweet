@@ -1,6 +1,7 @@
 window.addEventListener("load", function(){
 
 	var boton = document.getElementById("boton"); 
+	var count = document.getElementById("count");
 
 	boton.addEventListener("click", function(e){
 		e.preventDefault(); 
@@ -9,6 +10,9 @@ window.addEventListener("load", function(){
 		agregarMensaje(status);
 		document.getElementById("count").innerText = "140"
 		boton.disabled = true;
+		count.classList.remove("orange");
+		count.classList.remove("red");
+
 		textarea.value ="";
 	});
 
@@ -30,10 +34,16 @@ window.addEventListener("load", function(){
 			document.getElementById("count").innerText = maxcharacter - len;
 		}
 
-		if(this.value.length > 0)
+		if (len > 0)
 			boton.disabled = false;
-		else
-			boton.disabled =true;
+		if (len > 140)
+			boton.disabled = true;
+		if (len > 120) 
+			count.classList.add("orange");
+		if (len > 130)
+			count.classList.add("red");
+
+		
 	});
 
 });
