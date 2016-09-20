@@ -2,18 +2,21 @@ window.addEventListener("load", function(){
 
 	var boton = document.getElementById("boton"); 
 	var count = document.getElementById("count");
+	var textarea = document.getElementById("status");
 
 	boton.addEventListener("click", function(e){
 		e.preventDefault(); 
-		var textarea = document.getElementById("status");
+		// var textarea = document.getElementById("status");
 		var status = textarea.value;
 		agregarMensaje(status);
 		document.getElementById("count").innerText = "140"
 		boton.disabled = true;
 		count.classList.remove("orange");
 		count.classList.remove("red");
-
+		resize();
+		
 		textarea.value ="";
+
 	});
 
 	function agregarMensaje(status) {
@@ -56,14 +59,15 @@ window.addEventListener("load", function(){
 
 	var status = document.querySelector("textarea");
 
-	status.addEventListener('keydown', autosize);
+	status.addEventListener("keydown", autosize);
 	             
 	function autosize(){
 	  var el = this;
-	  setTimeout(function(){
-	    el.style.cssText = 'height:auto; padding:0';
+	    el.style.cssText = "height:auto; padding:0";
 	    el.style.cssText = 'height:' + el.scrollHeight + 'px';
-	  },0);
+	}
+	function resize(){
+		textarea.style.cssText = "height:auto; padding:0";
 	}
 
 });
