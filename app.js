@@ -34,17 +34,37 @@ window.addEventListener("load", function(){
 			document.getElementById("count").innerText = maxcharacter - len;
 		}
 
-		if (len > 0)
+		if (len > 0){
 			boton.disabled = false;
-		if (len > 140)
+		}
+		if (len > 140){
 			boton.disabled = true;
-		if (len > 120) 
+		}
+		if (len > 120) {
 			count.classList.add("orange");
-		if (len > 130)
+		}else{
+			count.classList.remove("orange");
+		}
+		if (len > 130){
 			count.classList.add("red");
+		}
+		else{
+			count.classList.remove("red");
 
-		
+		}	
 	});
+
+	var status = document.querySelector("textarea");
+
+	status.addEventListener('keydown', autosize);
+	             
+	function autosize(){
+	  var el = this;
+	  setTimeout(function(){
+	    el.style.cssText = 'height:auto; padding:0';
+	    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+	  },0);
+	}
 
 });
 
