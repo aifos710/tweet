@@ -21,6 +21,7 @@ window.addEventListener("load", function(){
 
 	function agregarMensaje(status) {
 		var div = document.createElement("div");
+		div.setAttribute("class", "ghostbox");
 		var posted = document.getElementById("posted");
 		posted.insertBefore(div, posted.childNodes[0]).classList.add("box");
 		var n =new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});

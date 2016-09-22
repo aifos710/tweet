@@ -1,7 +1,7 @@
 body{
 	text-align: center;
     margin: 0;
-    color: white;
+    color: #000;
     box-sizing: border-box;
     padding: 0;
 }
@@ -28,34 +28,52 @@ textarea{
 #count{
 	height:20px ;
 	width:40px ;
-	border:2px solid white;
+	border:2px solid #fff;
 	margin: auto;
-	margin-top: 10px;
-	color: white;
+	margin-top: 5px;
+	color: #fff;
 }
 
 #boton{
-	background-color: #D82800; 
-    border: 2px solid white;
+	background-color: #80D010; 
+    border: 2px solid #000;
     color: #fff;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-top: 30px;   
+    margin-top: 5px; 
+    border-radius: 5px;  
 }
 
 #boton:disabled{
-	background-color: white;
-	border:2px solid black;
-	color: black;
+	background-color: #D82800;
+	border:2px solid #fff;
+	color: #000;
 }
 
 .orange{
-	background-color:orange;
+	background-color: #ffa500;
 }
 
 .red{
-	background-color: red;
+	background-color: #ff0000 ;
 }
+
+/* ghost class */
+
+.ghostbox{
+	width: 250px;
+	height: auto;
+	border: 2px solid #C1501B;
+	padding: 5px;
+	word-wrap: break-word;
+	margin: 5px auto;
+	background-color: #FC9838; 
+	color:white;
+	border-radius: 5px;
+}
+
+
+
