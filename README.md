@@ -1,5 +1,7 @@
 # Tweet
 
+![gral](http://i63.tinypic.com/2dtvg3p.png)
+
 ### Versión 0.0.1
 
 - Diseñar un formulario que tenga un textarea y un botón.
@@ -49,7 +51,10 @@
 
 
 - No ingresar texto vacío (deshabilitar el botón de enviar).
+![first](http://i67.tinypic.com/nx86jt.png)
 - Contar la cantidad de caracteres de forma regresiva.
+![second](http://i67.tinypic.com/2hyfp6u.png)
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -95,6 +100,9 @@ var status = document.getElementById("status");
 
 ### Versión 0.0.3
 
+![four](http://i67.tinypic.com/17airb.png)
+![five](http://i65.tinypic.com/1zpmadx.png)
+
 
 - Si pasa los 140 caracteres, deshabilitar el botón.
 ```javascript
@@ -120,6 +128,8 @@ var status = document.getElementById("status");
 
 
 ### Versión 0.0.4
+
+![third](http://i67.tinypic.com/xnz2hh.png)
 ```javascript
 function autosize(){
 	  var el = this;
